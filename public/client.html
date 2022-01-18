@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="LD 2016">
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta id="theme-color" name="theme-color" content="#ffffff">
+
+        <base target="_blank">
+
+        <title>Streamer</title>
+
+        <style>
+            div#container {
+                margin: 0 auto 0 auto;
+                max-width: 40em;
+                padding: 1em 1.5em 1.3em 1.5em;
+            }
+
+            video {
+                background: #222;
+                margin: 0 0 20px 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Streamer</h1>
+
+        <div id="container">
+            <select id="deviceSelector"></select>
+
+            <span>Local Video</span>
+            <video id="local" autoplay muted playsinline controls></video>
+            
+            <span>Remote Video</span>
+            <video id="remote" autoplay muted playsinline controls></video>
+
+            <div>
+                <button id="call">Call</button>
+            </div>
+
+
+        </div>
+        <script src="client.js"></script>
+
+    </body>
+</html>
