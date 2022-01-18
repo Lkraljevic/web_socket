@@ -21,7 +21,7 @@ var protocol = window.location.protocol
 //     connection = new WebSocket(`wss://${hostname}:${port}/ws`);
 // }
 
-const ws = new WebSocket(`wss://${location.host}`);
+const connection = new WebSocket(`wss://${location.host}`);
 
 
 
