@@ -8,20 +8,14 @@ var deviceSelector = document.getElementById('deviceSelector');
 // Globals
 var peerConnection = null;
 const configuration = {'iceServers': [{'urls': 'stun:stun.l.google.com:19302'}]}
-var hostname = window.location.hostname; 
-// var hostname = 'localhost';
-// var hostname = '127.0.0.1';
-var port = 7071;
-var protocol = window.location.protocol
 
-// var connection = null; 
-// if(protocol == "http:") {
-//     connection = new WebSocket(`ws://${hostname}:${port}/ws`);
-// } else if(protocol == "https:") {
-//     connection = new WebSocket(`wss://${hostname}:${port}/ws`);
-// }
 
-const connection = new WebSocket(`wss://${location.host}`);
+var connection = null; 
+if(location.protocol == "http:") {
+    connection = new WebSocket(`ws://${location.host}`);
+} else if(location.protocol == "https:") {
+    connection = new WebSocket(`wss://${location.host}`);
+}
 
 
 
@@ -134,7 +128,7 @@ const handle_ice_candidates = async(candidate) => {
 // WebSocket 
 connection.onopen = function (event) {
     console.log("connection.onopen", event)
-    alert("connection.onopen")
+    // alert("connection.onopen")
     listDevices();
 };
 

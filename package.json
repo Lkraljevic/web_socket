@@ -4,10 +4,12 @@
   "version": "0.0.0",
   "repository": "websockets/ws",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "express": "^4.16.4",
+    "nodemon": "^2.0.15",
     "ws": "^7.3.1"
   }
 }
