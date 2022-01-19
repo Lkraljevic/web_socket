@@ -48,7 +48,7 @@ const peerEventHandler_ontrack = (e) => {
     // Add remote track
     console.log("peerEventHandler_ontrack")
     remoteVideo.srcObject = e.streams[0];   
-    remoteVideo.requestFullscreen()
+    // remoteVideo.requestFullscreen()
 }
 
 
