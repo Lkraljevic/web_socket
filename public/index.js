@@ -31,8 +31,8 @@ const createLocalStream = async () => {
         "audio": true, 
         "video": {
             'deviceId': deviceSelector.value,
-            'width': 640,
-            'height': 480
+            'width': 1920,
+            'height': 1080
         }
     }
     // var localStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true })
