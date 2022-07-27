@@ -1,17 +1,49 @@
 <html>
+
 <head>
     <style>
-        video#remote  {
-            position: fixed;
-            right: 0;
-            bottom: 0;
+        video#remote {
+            /* position: fixed; */
+            /* right: 0; */
+            /* bottom: 0;
             min-width: 100%;
-            min-height: 100%;
-      }
+            min-height: 100%; */
+        }
+
+        #console {
+            width: 800px;
+            height: 400px;
+            background: #575757;
+            color: white;
+            margin: 150px auto;
+            padding: 10px;
+            overflow: auto;
+        }
     </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console = {
+                panel: document.querySelector("#console"),
+                log: function (m) {
+                    var newline = document.createElement("div");
+                    newline.innerHTML = "&gt; [Log]:" + m;
+                    this.panel.appendChild(newline);
+                },
+                error: function (m) {
+                    var newline = document.createElement("div");
+                    newline.innerHTML = "&gt; [Error]:" + m;
+                    this.panel.appendChild(newline);
+                }
+            };
+        });
+    </script>
 </head>
+
 <body>
     <video id="remote" autoplay muted playsinline controls></video>
+    <div id="console"></div>
     <script src="/streamView.js"></script>
 </body>
+
 </html>

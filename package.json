@@ -8,6 +8,8 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
+    "@sentry/browser": "^7.7.0",
+    "@sentry/tracing": "^7.7.0",
     "express": "^4.16.4",
     "nodemon": "^2.0.15",
     "ws": "^7.3.1"
