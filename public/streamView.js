@@ -61,6 +61,7 @@ connection.onmessage = function (event) {
     
     var data = JSON.parse(event.data);
     var {type, payload} = data
+    console.log(`connection.onmessage -> ${type}`)
     switch(type) {
         case "OFFER":
             handle_offer(payload)
